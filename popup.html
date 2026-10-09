@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assessment Writer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <p class="eyebrow">Assessment writer</p>
+      <h1>Candidate record</h1>
+    </header>
+
+    <form id="loader" class="loader">
+      <label class="sr-only" for="record">Candidate record</label>
+      <input
+        id="record"
+        name="record"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="{Full Name}{Age}{Gender}{Race}{Country}{LinkedIn URL}{Google Drive resume URL}"
+      />
+      <button id="load" type="submit">Load</button>
+    </form>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <form id="assessment" class="assessment">
+      <label class="field span-2">
+        <span>Full Name</span>
+        <input id="fullName" name="fullName" type="text" autocomplete="name" />
+      </label>
+
+      <label class="field">
+        <span>Age</span>
+        <input id="age" name="age" type="text" inputmode="numeric" autocomplete="off" />
+      </label>
+
+      <label class="field">
+        <span>Gender</span>
+        <input id="gender" name="gender" type="text" autocomplete="off" />
+      </label>
+
+      <label class="field">
+        <span>Race</span>
+        <input id="race" name="race" type="text" autocomplete="off" />
+      </label>
+
+      <label class="field">
+        <span>Country</span>
+        <input id="country" name="country" type="text" autocomplete="country-name" />
+      </label>
+
+      <label class="field span-2">
+        <span>LinkedIn URL</span>
+        <input id="linkedin" name="linkedin" type="url" autocomplete="url" />
+      </label>
+
+      <label class="field span-2">
+        <span>Resume</span>
+        <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.rtf,.txt,.odt,application/pdf" />
+      </label>
+    </form>
+
+    <label class="stage" for="stage">
+      <span>Current Stage</span>
+      <select id="stage">
+        <option value="welcome">Welcome</option>
+        <option value="resume">Resume</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="experience">Experience</option>
+        <option value="education">Education</option>
+        <option value="about">About you</option>
+        <option value="availability">Availability</option>
+      </select>
+    </label>
+    <button id="start" class="start" type="button" disabled>Start Assessment</button>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
