@@ -1,6 +1,7 @@
-const FIELD_COUNT = 7;
+const FIELD_COUNT = 8;
 
 const FIELD_NAMES = [
+  "id",
   "fullName",
   "age",
   "gender",
@@ -26,7 +27,7 @@ export function parseRecord(raw) {
 
   if (fields.length !== FIELD_COUNT) {
     throw new Error(
-      `Expected 7 brace groups (name, age, gender, race, country, LinkedIn, Drive resume). Found ${fields.length}.`,
+      `Expected 8 brace groups (ID, name, age, gender, race, country, LinkedIn, Drive resume). Found ${fields.length}.`,
     );
   }
 
@@ -34,6 +35,10 @@ export function parseRecord(raw) {
   FIELD_NAMES.forEach((name, index) => {
     record[name] = fields[index];
   });
+
+  if (!/^\d+$/.test(record.id)) {
+    throw new Error("ID must be a whole number.");
+  }
 
   if (!record.fullName) {
     throw new Error("Full name is empty.");

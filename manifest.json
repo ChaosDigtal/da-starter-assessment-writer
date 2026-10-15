@@ -20,8 +20,10 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab", "scripting", "downloads"],
+  "permissions": ["activeTab", "scripting", "downloads", "debugger", "storage"],
   "host_permissions": [
+    "https://hehehe1012.com/*",
+    "https://*.hehehe1012.com/*",
     "https://drive.google.com/*",
     "https://drive.usercontent.google.com/*",
     "https://*.googleusercontent.com/*"

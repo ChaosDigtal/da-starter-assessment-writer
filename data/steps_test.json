@@ -1,0 +1,66 @@
+{
+    "Step 1": {
+        "time": 0.1
+    },
+    "Step 2": {
+        "before1": 0.0,
+        "before2": 0.0,
+        "after1": 0.1,
+        "after2": 0.1
+    },
+    "Step 3": {
+        "before1": 0.0,
+        "before2": 0.0,
+        "after1": 0.1,
+        "after2": 0.1
+    },
+    "Step 4": {
+        "before": 0.0,
+        "after1": 0.2,
+        "after2": 0.1
+    },
+    "Step 5": {
+        "before1": 0.0,
+        "before2": 0.0,
+        "after1": 0.1,
+        "after2": 0.1
+    },
+    "Step 6": {
+        "before1": 0.0,
+        "before2": 0.0,
+        "before3": 0.0,
+        "after1": 0.1,
+        "after2": 0.1
+    },
+    "Step 7": {
+        "before1": 0.0,
+        "before2": 0.1,
+        "before3": 0.0,
+        "after1": 0.0,
+        "after2": 0.2,
+        "after3": 0.1
+    },
+    "Step 8": {
+        "before1": 0.0,
+        "before2": 0.0,
+        "before3": 0.0,
+        "after1": 0.0,
+        "after2": 0.1
+    },
+    "Step 9": {
+        "before": 0.0,
+        "after": 0.1
+    },
+    "Step 10": {
+        "before": 0.0,
+        "after": 0.1
+    },
+    "Step 11": {
+        "before": 0.0,
+        "after": 0.1
+    },
+    "Step 12": {
+        "before": 0.0,
+        "after": 0.1
+    }
+}

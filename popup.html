@@ -20,13 +20,18 @@
         type="text"
         autocomplete="off"
         spellcheck="false"
-        placeholder="{Full Name}{Age}{Gender}{Race}{Country}{LinkedIn URL}{Google Drive resume URL}"
+        placeholder="{ID}{Full Name}{Age}{Gender}{Race}{Country}{LinkedIn URL}{Google Drive resume URL}"
       />
       <button id="load" type="submit">Load</button>
     </form>
     <p id="status" class="status" role="status" aria-live="polite"></p>
 
     <form id="assessment" class="assessment">
+      <label class="field">
+        <span>ID</span>
+        <input id="id" name="id" type="text" inputmode="numeric" autocomplete="off" />
+      </label>
+
       <label class="field span-2">
         <span>Full Name</span>
         <input id="fullName" name="fullName" type="text" autocomplete="name" />
@@ -73,9 +78,27 @@
         <option value="education">Education</option>
         <option value="about">About you</option>
         <option value="availability">Availability</option>
+        <option value="view-assessment">View Assessment</option>
+        <option value="start-assessment">Start Assessment</option>
+        <option value="step-1">Step 1</option>
+        <option value="step-2">Step 2</option>
+        <option value="step-3">Step 3</option>
+        <option value="step-4">Step 4</option>
+        <option value="step-5">Step 5</option>
+        <option value="step-6">Step 6</option>
+        <option value="step-7">Step 7</option>
+        <option value="step-8">Step 8</option>
+        <option value="step-9">Step 9</option>
+        <option value="step-10">Step 10</option>
+        <option value="step-11">Step 11</option>
+        <option value="step-12">Step 12</option>
+        <option value="step-13">Step 13</option>
       </select>
     </label>
-    <button id="start" class="start" type="button" disabled>Start Assessment</button>
+    <div class="actions">
+      <button id="start" class="start" type="button" disabled>Start Assessment</button>
+      <button id="pause" class="pause" type="button" disabled>Pause</button>
+    </div>
 
     <script type="module" src="popup.js"></script>
   </body>
