@@ -1025,8 +1025,9 @@ async function runStepSeven(tabId) {
   }
   report("Step 7: back on the assessment.");
 
-  report(`Step 7: waiting ${formatWait(before3 * 60 * 1000)} and scrolling.`);
-  await dwellWithScrolls(tabId, before3 * 60 * 1000, "Step 7");
+  const before3Ms = before3 * (1 + Math.random() * 0.4) * 60 * 1000;
+  report(`Step 7: waiting ${formatWait(before3Ms)} and scrolling.`);
+  await dwellWithScrolls(tabId, before3Ms, "Step 7");
 
   report(`Step 7: writing code ${choices.indexOf(chosen) + 1} of ${choices.length}.`);
   const coded = await retryInPage(tabId, writeStepSevenCode, [chosen.code], "Could not write the Step 7 code.", 60000);
